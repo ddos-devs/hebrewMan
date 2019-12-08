@@ -1,0 +1,19 @@
+{
+  "name": "@ddosdevs/hebrewman",
+  "version": "1.0.0",
+  "description": " utils function for hebrew websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddos-devs/hebrewMan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddos-devs/hebrewMan/issues"
+  },
+  "homepage": "https://github.com/ddos-devs/hebrewMan#readme"
+}
