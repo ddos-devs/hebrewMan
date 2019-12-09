@@ -35,7 +35,7 @@ function charsToNumbers(heb) {
     };
     let count = 0;
     for (let i = 0; i < heb.length; i++) {
-        count += charsNumbers[heb[i]];
+        count += charsNumbers[heb[i]] || 0;
     }
     return count;
 };
@@ -55,6 +55,13 @@ function getSequentialSeries(arrayOfHebNumbers) {
     }, []);
 }
 
-function isSequential(num1, num2) {
-    return charsToNumbers(num1) + 1 === charsToNumbers(num2);
+function isSequential(hebNum1, hebNum2) {
+    const num1 = charsToNumbers(hebNum1);
+    const num2 = charsToNumbers(hebNum2);
+
+    if(num1 === 0 || num2 === 0){
+        return false;
+    }
+
+    return num1 + 1 === num2;
 }
