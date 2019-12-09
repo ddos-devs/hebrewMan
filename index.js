@@ -2,8 +2,6 @@ module.exports = {charsToNumbers, getSequentialSerias: getSequentialSeries};
     
 function charsToNumbers(heb) {
 
-    heb = heb.replace("טו", "יה").replace("טז", "יו");
-
     const charsNumbers = {
         "א": 1,
         "ב": 2,
