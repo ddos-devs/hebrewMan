@@ -1,9 +1,12 @@
 {
   "name": "@ddosdevs/hebrewman",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": " utils function for hebrew websites",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "scripts": {
+    "build": "tsc",
     "test": "mocha"
   },
   "repository": {
@@ -11,14 +14,19 @@
     "url": "git+https://github.com/ddos-devs/hebrewMan.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ddos-devs/hebrewMan/issues"
   },
   "homepage": "https://github.com/ddos-devs/hebrewMan#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.6",
+    "@types/core-js": "^2.5.2",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.16",
     "chai": "^4.2.0",
-    "mocha": "^6.2.2"
-  },
-  "type": "module"
+    "mocha": "^6.2.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
 }

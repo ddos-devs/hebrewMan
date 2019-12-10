@@ -1,8 +1,6 @@
-module.exports = {charsToNumbers, getSequentialSerias: getSequentialSeries};
-    
-function charsToNumbers(heb) {
+export function charsToNumbers(heb: string) : number{
 
-    const charsNumbers = {
+    const charsNumbers: {[index:string]: number} = {
         "א": 1,
         "ב": 2,
         "ג": 3,
@@ -39,10 +37,10 @@ function charsToNumbers(heb) {
 };
 
 
-function getSequentialSeries(arrayOfHebNumbers) {
+export function getSequentialSeries(arrayOfHebNumbers: string[]): string[][] {
     const sortedArrayOfHebNumbers = arrayOfHebNumbers.sort();
-    return sortedArrayOfHebNumbers.reduce((series, hebNum) => {
-       const lastSubSeries = series[series.length - 1];
+    return sortedArrayOfHebNumbers.reduce((series: string[][], hebNum: string) => {
+       const lastSubSeries:string[] = series[series.length - 1];
 
        if(!lastSubSeries || !isSequential(lastSubSeries[lastSubSeries.length - 1], hebNum)){
            series.push([]);
@@ -53,7 +51,7 @@ function getSequentialSeries(arrayOfHebNumbers) {
     }, []);
 }
 
-function isSequential(hebNum1, hebNum2) {
+function isSequential(hebNum1: string, hebNum2: string) : boolean{
     const num1 = charsToNumbers(hebNum1);
     const num2 = charsToNumbers(hebNum2);
 
