@@ -1,6 +1,6 @@
 {
   "name": "@ddosdevs/hebrewman",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": " utils function for hebrew websites",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
